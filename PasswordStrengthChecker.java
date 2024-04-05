@@ -1,19 +1,5 @@
-
-import java.util.Scanner;
-
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter your desired Password: ");
-        String password = sc.nextLine();
-        sc.close();
-
-        String strengthFeedback = checkPasswordStrength(password);
-        System.out.println(strengthFeedback);
-
-    }
-    private static String checkPasswordStrength(String password)
+public class PasswordStrengthChecker {
+    String checkPasswordStrength(String password)
     {
         int lengthCriteria = 8;
         boolean hasUppercase = false;
@@ -46,7 +32,6 @@ public class Main {
                 }
             }
 
-
             if(hasSpecial == true && hasLowercase == true && hasDigit == true &&  hasUppercase == true)
             {
                 return "Strong Password";
@@ -62,6 +47,6 @@ public class Main {
         }
 
 
-    }
+        }
 
 }
